@@ -579,7 +579,7 @@ header .header{position: relative;height: 100px;}
     font-size: 32px;
     line-height: 60px;
     color: #2187e0;
-    margin-left: 15px;
+    margin: 0 10px 0 15px;
 }
 
 .joblist a:first-child{
