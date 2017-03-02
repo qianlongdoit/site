@@ -15,7 +15,7 @@ $(document).ready(function () {
     });
 
     /*点击事件*/
-    // 底部固定栏关闭
+    // 底部固定栏关闭,防止底部固定栏反复出现定义off
     var off = false;
     $("#shutdown").on("click", function () {
         $(".f-footer").css("display", "none");
