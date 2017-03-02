@@ -16,8 +16,10 @@ $(document).ready(function () {
 
     /*点击事件*/
     // 底部固定栏关闭
+    var off = false;
     $("#shutdown").on("click", function () {
         $(".f-footer").css("display", "none");
+        off = true;
     });
     //回到顶部按钮
     $("#sideNav a:last").on("click", function () {
@@ -192,7 +194,7 @@ $(document).ready(function () {
             fixNav.css("display", "block");
         }
         /*底部固定导航*/
-        if (t > $(window).height()) {
+        if (t > $(window).height() && !off) {
             fixBottom.css("display", "block");
         }else if(t < $(window).height()){
             fixBottom.css("display", "none");
@@ -309,6 +311,7 @@ $(document).ready(function () {
                     var n = boolean ? 0 : -20;
                     $(".s4 ul").css("margin-top", n);
                 }, 2000);
+                oUl.off("mouseleave");
             });
         });
 
